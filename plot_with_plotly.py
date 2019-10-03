@@ -45,7 +45,7 @@ else:
 
 if st.sidebar.button("See bolloons"):
     st.balloons()
-    st.error("fuck")
+    st.error("some error")
 
 t = st.time_input('Set an alarm for', datetime.time(8, 45))
 st.write("time is set to: "+str(t))
@@ -82,11 +82,11 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data)
 
-image = Image.open('ss.png')
+image = Image.open('pic.png')
 st.image(image, caption='Sunrise by the mountains', use_column_width=True)
 
 
-audio_file = open('au.ogg', 'rb')
+audio_file = open('audio.ogg', 'rb')
 audio_bytes = audio_file.read()
 
 st.audio(audio_bytes, format='audio/ogg')
